@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject</title>
 </head>
 <body>
-    
+  <div id = "title">
+    <h1>Miliege Management</h1>
+    <hr>
+    </div>
+  <div>금액 : <input id = "price" type="text" size="20" readonly style ="background-color :skyblue"> <button onclick ="randomPrice()">check</button>
+  </div>
+<div>휴대폰 번호 : <input id = "tel" readonly style = "background-color : white;"><button onclick = "save()">저장</button><button onclick = "cancel()">취소</button>
+</div>
+  <div>
+  <button class = "number">010</button>
+  <button class = "number">1</button>
+  <button class = "number">2</button>
+  <button class = "number">3</button>
+  <button class = "number">4</button>
+  <button class = "number">5</button>
+  <button class = "number">6</button>
+  <button class = "number">7</button>
+  <button class = "number">8</button>
+  <button class = "number">9</button>
+  <button class = "backspace">x</button>
+  <button class = "clear">c</button>
+  </div>
+  <hr>
+  <script>
+    function randomPrice () {
+      let cash = Math.random() * 100;
+      cash = Math.ceil(cash) * 1000;
+      cash = cash.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.querySelector("#price").value = cash;      
+    }   
+      function inputNum(){
+        let num = document.getElementsByClassName("number");
+        tel.value = tel.value(this);
+      }
+      window.onload = function () {      
+      document.querySelector("#randomPrice").addEventListener("click",randomPrice);
+    }
+  </script>
 </body>
 </html>
