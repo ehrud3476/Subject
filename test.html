@@ -4,63 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subject</title>
- <style>
- .number {
-
-background-color: skyblue;
-color: white;
-padding: 14px 20px;
-text-align: center;
-text-decoration: none;
-font-size: 10px;
-margin: 2px 2px;
-bottom : 30px;
-}
-.backspace {
-
-background-color: skyblue;
-color: black;
-padding: 14px 20px;
-text-align: center;
-text-decoration: none;
-font-size: 10px;
-margin: 2px 2px;
-}
-
-.clear {
-background-color: skyblue;
-color: red;
-padding: 14px 20px;
-text-align: center;
-text-decoration: none;
-font-size: 10px;
-margin: 2px 2px;
-}
- </style>
 </head>
 <body>
   <div id = "title">
     <h1>Miliege Management</h1>
     <hr>
     </div>
-  <div>금액 : <input id = "price" type="text" size="20" readonly style ="background-color :greenyellow"> <button onclick ="randomPrice()">check</button>
+  <div>금액 : <input id = "price" type="text" size="20" readonly style ="background-color :skyblue"> <button onclick ="randomPrice()">check</button>
   </div>
-<div>휴대폰 번호 : <input id = "tel" readonly type ="text" style = "background-color : white;"><button onclick = "save()">저장</button>
-</div>
+<div>휴대폰 번호 : <input id = "tel"   readonly style = "background-color : white;"><button onclick = "save()">저장</button>
+</div>        
+
   <div id = "telNumber">
-  
+  <button class = "number" value = "010">010</button>
   <button class = "number" value = "0">0</button>
   <button class = "number" value = "1">1</button>
   <button class = "number" value = "2">2</button>
-  <br>
-  <button class = "number" value = "3">3</button>  
+  <button class = "number" value = "3">3</button>
   <button class = "number" value = "4">4</button>
   <button class = "number" value = "5">5</button>
-  <br>
   <button class = "number" value = "6">6</button>
   <button class = "number" value = "7">7</button>
   <button class = "number" value = "8">8</button>
-  <br>
   <button class = "number" value = "9">9</button>
   <button class = "backspace">x</button>
   <button class = "clear">c</button>
@@ -80,30 +45,15 @@ margin: 2px 2px;
   </script>  
   <script>   
    
-   // function inputNumber(){       
-     // $("#tel").val($("#tel").val()+this.value);
-
-    
+     
     $(document).ready(function(){
       
-      
-      
+      $(".number").click(inputNumber);
     }); 
-    $(".backspace").click(function(){
-      var str = $("#tel").val();
-      $("#tel").val(str.substring(0,str.length - 1));
-    });
-    $(".clear").click(function(){
-      document.getElementById("tel").value = null;
-    });
-    $(".number").click(function(){
-      $("#tel").val($("#tel").val()+this.value);
+  </script>
+ <script>
 
-    });
-   
-      
-      
-    
-   </script>
+</script>
+  
 </body>
 </html>
